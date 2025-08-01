@@ -273,8 +273,27 @@ $( document ).ready(function() {
 
   }
 
+  function faqFunctionality() {
+    
+    $('#faq-trigger').click(function(e) {
+      e.preventDefault();
+      $('#faq-content').fadeIn(400);
+      $('.about--banner').fadeOut(200);
+      $('.about--options').fadeOut(200);
+    });
+
+    $('#faq-close').click(function(e) {
+      e.preventDefault();
+      $('#faq-content').fadeOut(400);
+      $('.about--banner').fadeIn(200);
+      $('.about--options').fadeIn(200);
+    });
+
+  }
+
   outerNav();
   workSlider();
   transitionLabels();
+  faqFunctionality();
 
 });

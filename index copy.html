@@ -172,106 +172,10 @@
                   <a href="#0">
                     <h3>Philosophy</h3>
                   </a>
-                                     <a href="#0" id="faq-trigger">
-                     <h3>FAQ</h3>
-                   </a>
+                  <a href="#0">
+                    <h3>FAQ</h3>
+                  </a>
                 </div>
-                                 <div id="faq-content" class="faq-content" style="display: none;">
-                   <div class="faq-container">
-                     <h2>Frontend Developer Interview Questions</h2>
-                     
-                     <div class="faq-item">
-                       <h3>1. Can you walk me through how you decide which HTML tags to use when building a new page?</h3>
-                       <p>My approach is systematic and content-driven:</p>
-                       <ul>
-                         <li><strong>Content Analysis First:</strong> I examine the content's purpose and meaning before choosing tags</li>
-                         <li><strong>Hierarchical Structure:</strong> Use &lt;h1&gt; to &lt;h6&gt; based on content importance, not visual styling</li>
-                         <li><strong>Semantic Purpose:</strong> &lt;nav&gt; for navigation, &lt;main&gt; for primary content, &lt;aside&gt; for complementary info</li>
-                         <li><strong>Landmark Elements:</strong> &lt;header&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;article&gt; for page structure</li>
-                         <li><strong>Meaning Over Appearance:</strong> &lt;strong&gt; for importance, &lt;em&gt; for emphasis, &lt;cite&gt; for citations</li>
-                       </ul>
-                       <p>I always ask: "What is this content's role?" rather than "How should it look?"</p>
-                     </div>
-
-                     <div class="faq-item">
-                       <h3>2. What are the benefits of using semantic HTML for accessibility and SEO?</h3>
-                       <div class="faq-benefits">
-                         <div class="benefit-section">
-                           <h4>Accessibility Benefits:</h4>
-                           <ul>
-                             <li><strong>Screen Reader Navigation:</strong> Proper landmarks (&lt;nav&gt;, &lt;main&gt;, &lt;header&gt;) create logical page structure</li>
-                             <li><strong>Keyboard Navigation:</strong> Semantic elements improve focus management and tab order</li>
-                             <li><strong>ARIA Integration:</strong> Semantic HTML reduces the need for ARIA attributes</li>
-                             <li><strong>Form Accessibility:</strong> &lt;label&gt;, &lt;fieldset&gt;, &lt;legend&gt; create better form experiences</li>
-                           </ul>
-                         </div>
-                         <div class="benefit-section">
-                           <h4>SEO Benefits:</h4>
-                           <ul>
-                             <li><strong>Content Understanding:</strong> Search engines better comprehend page structure and content hierarchy</li>
-                             <li><strong>Rich Snippets:</strong> Semantic markup enables enhanced search results</li>
-                             <li><strong>Mobile-First Indexing:</strong> Semantic structure improves mobile search rankings</li>
-                             <li><strong>Core Web Vitals:</strong> Proper HTML structure contributes to performance metrics</li>
-                           </ul>
-                         </div>
-                       </div>
-                     </div>
-
-                     <div class="faq-item">
-                       <h3>3. Can you give a specific example where it made a measurable impact?</h3>
-                       <p><strong>Image Gallery Site Refactor:</strong></p>
-                       <ul>
-                         <li><strong>Before:</strong> All content wrapped in generic &lt;div&gt; elements with class-based styling</li>
-                         <li><strong>After:</strong> Implemented semantic structure with &lt;article&gt; for product, &lt;section&gt; for reviews, &lt;aside&gt; for related products</li>
-                         <li><strong>Results:</strong> 40% improvement in screen reader navigation time, 15% increase in organic search traffic, and 25% better mobile conversion rates</li>
-                         <li><strong>Technical Impact:</strong> Reduced ARIA attributes by 60%, improved Lighthouse accessibility score from 65 to 95</li>
-                       </ul>
-                     </div>
-
-                     <div class="faq-item">
-                       <h3>4. How do you ensure your markup is semantically correct during code reviews or audits?</h3>
-                       <p>I use a multi-layered validation approach:</p>
-                       <ul>
-                         <li><strong>Automated Tools:</strong> ESLint with accessibility plugins, axe-core for automated testing</li>
-                         <li><strong>Manual Testing:</strong> Screen reader testing (NVDA, JAWS, VoiceOver), keyboard-only navigation</li>
-                         <li><strong>Code Review Checklist:</strong> Verify heading hierarchy, landmark usage, form labeling, and ARIA implementation</li>
-                         <li><strong>Validation Services:</strong> W3C HTML validator, accessibility checkers, and browser developer tools</li>
-                         <li><strong>Peer Reviews:</strong> Cross-team accessibility reviews with UX specialists</li>
-                       </ul>
-                     </div>
-
-                     <div class="faq-item">
-                       <h3>5. Have you ever had to refactor a non-semantic layout? What challenges did you face and how did you resolve them?</h3>
-                       <p><strong>Image Gallery Site Migration:</strong></p>
-                       <ul>
-                         <li><strong>Challenge:</strong> Table-based layouts with nested &lt;div&gt; structures, no heading hierarchy, and inline styles</li>
-                         <li><strong>Approach:</strong> Incremental refactoring with feature flags to maintain functionality</li>
-                         <li><strong>Process:</strong> Content audit → semantic mapping → progressive enhancement → testing</li>
-                         <li><strong>Resolution:</strong> Implemented proper &lt;article&gt;, &lt;section&gt;, and heading structure while maintaining visual design</li>
-                         <li><strong>Outcome:</strong> 50% reduction in maintenance time, improved SEO rankings, and better user experience</li>
-                       </ul>
-                     </div>
-
-                     <div class="faq-item">
-                       <h3>6. How do screen readers interpret semantic HTML, and how do you test for that?</h3>
-                       <p><strong>Screen Reader Interpretation:</strong></p>
-                       <ul>
-                         <li><strong>Landmark Navigation:</strong> Screen readers use semantic elements to create navigation menus</li>
-                         <li><strong>Content Announcement:</strong> Proper heading hierarchy creates logical reading order</li>
-                         <li><strong>Form Context:</strong> Semantic form elements provide better input context and error handling</li>
-                         <li><strong>Dynamic Content:</strong> ARIA live regions work better with semantic HTML structure</li>
-                       </ul>
-                       <p><strong>Testing Methods:</strong></p>
-                       <ul>
-                         <li><strong>Tools:</strong> NVDA (Windows), JAWS, VoiceOver (Mac), TalkBack (Android)</li>
-                         <li><strong>Techniques:</strong> Keyboard-only navigation, focus management testing, content announcement verification</li>
-                         <li><strong>Validation:</strong> axe-core automated testing, manual screen reader testing, accessibility audits</li>
-                       </ul>
-                     </div>
-
-                     <button class="faq-close" id="faq-close">Close FAQ</button>
-                   </div>
-                 </div>
               </div>
             </li>
             <li class="l-section section">
@@ -394,8 +298,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-  <script src="assets/js/vendor/hammer-2.0.8.js"></script>
-  <script src="assets/js/functions.js"></script>
+  <script src="assets/js/functions-min.js"></script>
 </body>
 
 </html>
