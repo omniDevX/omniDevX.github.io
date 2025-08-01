@@ -275,11 +275,32 @@ $( document ).ready(function() {
 
   function faqFunctionality() {
     
+    // Check if URL has #faq hash on page load
+    if (window.location.hash === '#faq') {
+      // Navigate to About section first, then show FAQ
+      var aboutIndex = 2; // About is the 3rd section (index 2)
+      var curActive = $('.side-nav').find('.is-active');
+      var curPos = $('.side-nav').children().index(curActive);
+      var lastItem = $('.side-nav').children().length - 1;
+      
+      updateNavs(aboutIndex);
+      updateContent(curPos, aboutIndex, lastItem);
+      
+      // Show FAQ after navigation
+      setTimeout(function() {
+        $('#faq-content').fadeIn(400);
+        $('.about--banner').fadeOut(200);
+        $('.about--options').fadeOut(200);
+      }, 500);
+    }
+    
     $('#faq-trigger').click(function(e) {
       e.preventDefault();
       $('#faq-content').fadeIn(400);
       $('.about--banner').fadeOut(200);
       $('.about--options').fadeOut(200);
+      // Update URL with #faq hash
+      window.location.hash = 'faq';
     });
 
     $('#faq-close').click(function(e) {
@@ -287,6 +308,10 @@ $( document ).ready(function() {
       $('#faq-content').fadeOut(400);
       $('.about--banner').fadeIn(200);
       $('.about--options').fadeIn(200);
+      // Remove #faq hash from URL
+      if (window.location.hash === '#faq') {
+        history.pushState('', document.title, window.location.pathname + window.location.search);
+      }
     });
 
   }
