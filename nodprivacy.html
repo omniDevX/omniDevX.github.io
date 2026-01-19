@@ -38,62 +38,101 @@
 <body>
 
   <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> January 12, 2026</p>
+  <p><strong>Last updated:</strong> January 19, 2026</p>
 
   <h2>Overview</h2>
   <p>
-    This app "Nod: Daily Safety Check-In" respects your privacy. It is designed to function entirely on your
-    device and does not collect, transmit, or share personal data with any
-    server or third party.
+    Nod: Daily Safety Check-In is designed to help users, including seniors,
+    confirm their daily well-being. The app collects and stores limited personal
+    data solely to provide its safety check-in and emergency notification
+    functionality.
   </p>
 
-   <h2>Data Collected</h2>
-  <p>The app allows users to voluntarily provide:</p>
+  <h2>Data Collected</h2>
+  <p>The app may collect and store the following information:</p>
   <ul>
-    <li>Name</li>
+    <li>User-provided name</li>
+    <li>Device identifier (used for identification without account registration)</li>
     <li>Emergency contact email address</li>
     <li>Check-in timestamps</li>
   </ul>
 
   <h2>How Data Is Used</h2>
   <ul>
-    <li>To store and display check-in history</li>
+    <li>To record daily check-ins initiated by the user</li>
+    <li>To determine whether a check-in has been missed for 48 hours</li>
     <li>
-      To send an email notification to the emergency contact if a check-in is
-      missed
+      To send an email notification to the assigned emergency contact if a
+      check-in is missed
     </li>
+    <li>To associate check-in data with a device without requiring login or registration</li>
   </ul>
 
   <h2>How Data Is Stored</h2>
   <ul>
-    <li>Data may be stored locally on your device.</li>
     <li>
-      If email notifications are enabled, the emergency email address may be
-      transmitted for the sole purpose of sending notification emails.
+      Data is stored securely in Google Firebase Firestore, a cloud database
+      service operated by Google.
     </li>
-    <li>No personal data is used for advertising or analytics.</li>
+    <li>
+      The device identifier is used only to distinguish users and does not grant
+      access to other device data.
+    </li>
+    <li>
+      No personal data is used for advertising, tracking, or analytics.
+    </li>
+  </ul>
+
+  <h2>Automated Processing &amp; Notifications</h2>
+  <p>
+    An automated background process runs periodically to check whether a user
+    has missed a check-in for 48 hours.
+  </p>
+  <ul>
+    <li>
+      If a missed check-in is detected, an email notification is sent to the
+      designated emergency contact.
+    </li>
+    <li>
+      This process is executed using scheduled automation (GitHub Actions).
+    </li>
+  </ul>
+
+  <h2>Email Delivery</h2>
+  <p>
+    Emergency notification emails are sent using Brevo, an external email
+    delivery service.
+  </p>
+  <ul>
+    <li>
+      The emergency contact email address is shared with Brevo solely for the
+      purpose of sending notification emails.
+    </li>
+    <li>
+      Brevo processes email data according to its own privacy and security
+      practices.
+    </li>
   </ul>
 
   <h2>Data Sharing</h2>
   <p>
-    Personal data is shared only in the following limited case:
+    Personal data is shared only as required to provide the app’s core
+    functionality:
   </p>
   <ul>
-    <li>
-      The emergency contact email address is used to send notification emails
-      when required by the app’s functionality.
-    </li>
+    <li>Google Firebase Firestore for secure data storage</li>
+    <li>Brevo for sending emergency notification emails</li>
   </ul>
   <p>
-    No data is sold or shared with third parties for marketing or tracking
+    No personal data is sold or shared for marketing, advertising, or tracking
     purposes.
   </p>
 
   <h2>Internet Usage</h2>
   <p>
-    Internet access may be required to send emergency notification emails.
-    Aside from this purpose, the app does not perform background data
-    collection or analytics.
+    Internet access is required to store check-in data and to send emergency
+    notification emails. The app does not perform background analytics or
+    unrelated data collection.
   </p>
 
   <h2>Permissions</h2>
@@ -109,9 +148,9 @@
 
   <h2>Data Retention &amp; Deletion</h2>
   <p>
-    Data is retained only as long as necessary to provide the app’s
-    functionality. You may delete all stored data at any time by uninstalling
-    the app.
+    Data is retained only for as long as necessary to provide the app’s
+    functionality. Users may delete all stored data by uninstalling the app or
+    by contacting the developer.
   </p>
 
   <h2>Children’s Privacy</h2>
@@ -122,8 +161,8 @@
 
   <h2>Changes to This Policy</h2>
   <p>
-    This privacy policy may be updated if new features are introduced. Any
-    changes will be reflected on this page.
+    This privacy policy may be updated if new features or services are
+    introduced. Any changes will be reflected on this page.
   </p>
 
   <h2>Contact</h2>
